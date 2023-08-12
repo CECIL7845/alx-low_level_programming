@@ -1,26 +1,29 @@
 #include <stdio.h>
 /**
- * main -  A program that prints all possible different
- * combinations of two digits.
+ * main - A program prints all possible different
+ * combinations of two digits
  * Return: 0
  */
 int main(void)
 {
-int x;
-int y;
-for (x = 0; x <= 8; x++)
-{
-for (y = y + 1; y <= 9; y++)
-{
-putchar(x + '0');
-putchar(y + '0');
-if (x != 8 || y != 9)
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-putchar('\n');
-return (0);
+	int x, y;
+
+	for (x = 48; x <= 56; x++)
+	{
+		for (y = 49; y <= 57; y++)
+		{
+			if (x > y)
+			{
+				putchar(x);
+				putchar(y);
+				if (x != 56 || y != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
