@@ -1,17 +1,17 @@
 #include "main.h"
+
 /**
- * main - A program that prints the alphabet,
- *  in lowercase, followed by a new line.
- *  Return: 0
+ * print_alphabet - print all alphabet in lowercase
+ * followed by a new line
  */
 
-void print_alphabet(void);
+void print_alphabet(void)
 {
 	char alph;
 
 	for (alph = 'a'; alph <= 'z'; alph++)
-	{
-		putchar(alph);
-	}
+		_putchar(alph);
+
 	_putchar('\n');
 }
+
