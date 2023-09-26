@@ -6,20 +6,21 @@
  *
  * Return: a pointer to the first node
  */
+
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *tmp = NULL;
-	listint_t *present = NULL;
+	listint_t *pre = NULL;
+	listint_t *next = NULL;
 
 	while (*head)
 	{
-		present = (*head)->present;
-		(*head)->present = tmp;
-		tmp = *head;
-		*head = present;
+		next = (*head)->next;
+		(*head)->next = pre;
+		pre = *head;
+		*head = next;
 	}
 
-	*head = tmp;
+	*head = pre;
 
 	return (*head);
 }
